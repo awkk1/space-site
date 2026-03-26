@@ -1,0 +1,314 @@
+body {
+    background: black;
+    color: White;
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+    radial-gradient(1px 1px at 10% 20%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 23% 45%, white, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 35% 78%, #ffe6b0, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 42% 12%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 57% 91%, white, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 63% 34%, #b0e0ff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 78% 56%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 84% 23%, white, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 92% 67%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 5% 88%, #ffe6b0, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 18% 39%, white, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 29% 72%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 41% 15%, #b0e0ff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 53% 64%, white, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 68% 43%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 76% 81%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 89% 29%, #ffe6b0, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 95% 53%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 12% 8%, white, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 22% 65%, #ffe6b0, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 31% 42%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 44% 17%, white, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 55% 93%, #b0e0ff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 61% 28%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 73% 51%, white, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 79% 84%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 86% 13%, #ffe6b0, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 94% 37%, white, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 7% 71%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 16% 95%, #b0e0ff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 27% 22%, white, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 38% 49%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 48% 76%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 59% 31%, #ffe6b0, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 67% 58%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 75% 82%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 82% 44%, white, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 91% 16%, #b0e0ff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 96% 63%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 3% 29%, white, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 19% 54%, #ffe6b0, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 33% 87%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 47% 36%, white, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 58% 69%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 66% 93%, #b0e0ff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 77% 14%, white, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 88% 47%, white, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 98% 72%, white, rgba(0,0,0,0));
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+    animation: twinkle 4s infinite;
+}
+
+@keyframes twinkle {
+    0% {opacity: 1;}
+    50% {opacity: 0.3;}
+    100% {opacity: 1;}
+}
+
+.shooting-star {
+    position: fixed;
+    top: -10px;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgb(226, 187, 12);
+    animation: shoot 30s linear infinite;
+    opacity: 0;
+}
+
+.shooting-star:nth-child(1) {
+    top: 10%;
+    left: -10px;
+    animation-delay: 0s;
+}
+
+.shooting-star:nth-child(2) {
+    top: 30%;
+    left: -20px;
+    animation-delay: 1.5s;
+    animation-duration: 40s;
+}
+
+.shooting-star:nth-child(3) {
+    top: 60%;
+    left: -30px;
+    animation-delay: 0.8s;
+    animation-duration: 35s;
+    width: 3px;
+    height: 3px;
+}
+
+@keyframes shoot {
+    0% {
+        transform: translate(0,0) scale(1);
+        opacity: 1;
+    }
+    10% {
+        transform: translate(100vw, 100vh) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(100vw, 100vh) scale(0);
+        opacity: 0;
+    }
+}
+
+h1.title {
+    font-size: 24px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.title span {
+    margin: 7px;
+    display: inline-block;
+    animation: fly 2s ease-in-out infinite;
+}
+
+@keyframes fly {
+    0% { transform: translateY(0);}
+    50% { transform: translateY(-5px);}
+    100% { transform: translateY(0);}
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+}
+
+nav > ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul ul {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    padding: 10px;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+nav li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: cyan;
+}
+
+.info-sun, .info-earth, .info-mars, .info-venus {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    border: 1px solid rgb(63, 3, 94);
+    margin: 30px;
+    padding: 20px;
+}
+
+.text-block {
+    flex: 1;
+}
+
+.info-sun h1, .info-earth h1, .info-mars h1, .info-venus h1 {
+    background: linear-gradient(45deg, gold, orange);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgb(201, 18, 18);
+}
+
+.info-sun p, .info-earth p, .info-mars p, .info-venus p {
+    margin-top: 10px;
+    color: rgb(175, 165, 165);
+    text-shadow: 0 0 15px rgb(60, 165, 165);
+}
+
+.sun, .earth, .mars, .venus {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.sun:hover, .earth:hover, .mars:hover, .venus:hover {
+    transform: scale(1.15);
+}
+
+.black-hole {
+    border: 2px solid purple;
+    margin: 30px;
+    padding: 20px;
+    color: rgb(105, 4, 4);
+}
+
+.blackhole-circle {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle at 30% 30%, #222, black 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 30px #8a2be2, 0 0 60px #4b0082;
+}
+
+.blackhole-circle::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 5px solid rgba(255, 0, 255, 0.5);
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+}
+
+/*.blackhole-circle::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2), transparent 70%);
+    border-radius: 50%;
+    animation: suck 3s ease-in infinite;
+    pointer-events: none;
+}*/
+
+/*.particles {
+  position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 
+        20px 30px white,
+        50px 80px white,
+        90px 40px white,
+        130px 120px white,
+        30px 150px white,
+        170px 60px white,
+        70px 140px white,
+        110px 20px white,
+        150px 100px white,
+        40px 180px white;
+    animation: swirl 6s linear infinite;
+}*/
+
+@keyframes rotate {
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}
+
+/*@keyframes suck {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}*/
+
+/*@keyframes swirl {
+    0% {
+        transform: rotate(0deg) translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(720deg) translate(-30px, -30px) scale(0);
+        opacity: 0;
+    }
+}*/
+
+@media (max-width: 600px) {
+    nav > ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .info-sun, .info-earth, .info-mars, .info-venus {
+        flex-direction: column;
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .sun, .earth, .mars, .venus {
+        width: 100%;
+        height: auto;
+    }
+}
