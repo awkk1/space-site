@@ -169,7 +169,9 @@ nav a {
     color: cyan;
 }
 
-.info-sun, .info-earth, .info-mars, .info-venus {
+/*Контейнер всей планеты*/
+.info-sun, .info-earth, .info-mars, .info-venus, .info-mercury, .info-jupiter, .info-saturn, .info-uranus,
+.info-neptune {
     display: flex;
     align-items: flex-start;
     gap: 20px;
@@ -178,35 +180,42 @@ nav a {
     padding: 20px;
 }
 
+/*Весь контейнер с название планеты и опасанием ее*/
 .text-block {
     flex: 1;
 }
 
-.info-sun h1, .info-earth h1, .info-mars h1, .info-venus h1 {
+/*Название планеты*/
+.info-sun h1, .info-earth h1, .info-mars h1, .info-venus h1, .info-mercury h1, .info-jupiter h1, .info-saturn h1,
+.info-uranus h1, .info-neptune h1{
     background: linear-gradient(45deg, gold, orange);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgb(201, 18, 18);
+    text-shadow: 0 0 35px rgb(201, 18, 18);
 }
 
-.info-sun p, .info-earth p, .info-mars p, .info-venus p {
-    margin-top: 10px;
+/*Описание планеты*/
+.info-sun p, .info-earth p, .info-mars p, .info-venus p, .info-mercury p, .info-jupiter p, .info-saturn p,
+.info-uranus p, .info-neptune p{
     color: rgb(175, 165, 165);
     text-shadow: 0 0 15px rgb(60, 165, 165);
 }
 
-.sun, .earth, .mars, .venus {
+/*Изорбажения планет*/
+.sun, .earth, .mars, .venus, .mercury, .jupiter, .saturn, .uranus, .neptune {
     width: 300px;
     height: 300px;
     object-fit: cover;
     transition: transform 0.3s;
 }
 
-.sun:hover, .earth:hover, .mars:hover, .venus:hover {
+/*Hover эффект изображения планет*/
+.sun:hover, .earth:hover, .mars:hover, .venus:hover, .mercury:hover, .jupiter:hover, .saturn:hover, .uranus:hover,
+.neptune:hover{
     transform: scale(1.15);
 }
 
-.black-hole {
+/*.black-hole {
     border: 2px solid purple;
     margin: 30px;
     padding: 20px;
@@ -233,7 +242,7 @@ nav a {
     border: 5px solid rgba(255, 0, 255, 0.5);
     border-radius: 50%;
     animation: rotate 5s linear infinite;
-}
+}*/
 
 /*.blackhole-circle::after {
     content: "";
@@ -268,7 +277,7 @@ nav a {
     animation: swirl 6s linear infinite;
 }*/
 
-@keyframes rotate {
+/*@keyframes rotate {
     from { transform: rotate(0deg);}
     to { transform: rotate(360deg);}
 }
@@ -295,19 +304,26 @@ nav a {
     }
 }*/
 
+/*Адаптив под другие устройства*/
 @media (max-width: 600px) {
     nav > ul {
         flex-direction: column;
         gap: 10px;
     }
 
-    .info-sun, .info-earth, .info-mars, .info-venus {
+    .text-block {
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .info-sun, .info-earth, .info-mars, .info-venus, .info-mercury, .info-jupiter, .info-saturn, .info-uranus,
+    .info-neptune{
         flex-direction: column;
         margin: 15px;
         padding: 15px;
     }
 
-    .sun, .earth, .mars, .venus {
+    .sun, .earth, .mars, .venus, .mercury, .jupiter, .saturn, .uranus, .nept {
         width: 100%;
         height: auto;
     }
