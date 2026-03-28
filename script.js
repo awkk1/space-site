@@ -4,7 +4,7 @@ let langs = document.querySelectorAll('ul.lang-dropdown li')
 
 /*Смена языка */
 button.onclick = function() {
-    if (listlang.style.display == 'none') {
+    if (listlang.style.display == 'none' || listlang.style.display === '') {
         listlang.style.display = 'flex'
     } else {
         listlang.style.display = 'none'
@@ -60,3 +60,27 @@ buttonScrollTo.onclick = function() {
     window.scrollTo({ top: 0, behavior: 'smooth'});
 }
 /*Конец скрипта кнопки */
+
+/*Слайдер галерея */
+let track = document.querySelector('.slider-track')
+let images = document.querySelectorAll('.gallery')
+let buttonback = document.querySelector('.slider-back')
+let buttonnext = document.querySelector('.slider-next')
+
+let countimages = images.length
+let widthimage = 608
+let index = 0
+
+buttonnext.onclick = function() {
+    if (index < countimages - 1) {
+        index++
+        track.style.transform = `translateX(${-index * widthimage}px)`
+    }
+}
+
+buttonback.onclick = function() {
+    if (index > 0) {
+        index--
+        track.style.transform = `translateX(${-index * widthimage}px)`
+    }
+}
